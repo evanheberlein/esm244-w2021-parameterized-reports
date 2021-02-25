@@ -2,7 +2,7 @@
 title: "Summary report for the `r params$pick_species`"
 output: html_document
 params:
-  pick_species: bear
+  pick_species: marmot
   
 ---
 

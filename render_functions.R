@@ -31,3 +31,18 @@ for (country in country_name) {
 ```
 
 # Add your functions here for the 'your turn' part!
+
+# ------ PENGUIN RENDERING ------- #
+render_penguin_report = function(species) {
+  rmarkdown::render(
+    input = "your_turn.Rmd",
+    params = list(species = species),
+    output_file = paste0("penguin_report_", species, ".html")
+  )
+}
+
+penguin_species <- unique(penguins$species)
+
+for (species in penguin_species) {
+  render_penguin_report(species)
+}
